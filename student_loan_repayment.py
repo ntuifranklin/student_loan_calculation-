@@ -25,8 +25,8 @@ for i in range(0,MAX):
 for i in range(0,MAX):
     number_payments.append(0)
     loan = loan_table[i][0] * MULTIPLIER
-    yearly_rate = loan_table[i][1]
-    yearly_rate = 4.5
+    #yearly_rate = 4.5 This is the average apr.
+    yearly_rate = loan_table[i][1] #here I am using the actual APR for each loan. I could however set the APR to be the same for all the loans
     monthly_rate = (yearly_rate/100)/12
     list_payments.append(0.0)
     monthly_percentage_payment = monthly_payment * percentage[i]
@@ -41,7 +41,7 @@ for i in range(0,MAX):
             amount =  monthly_percentage_payment
         else:
             amount = loan
-            print("last maount for "+str(loan_table[i][0])+" = "+str(amount))
+            #print("last maount for "+str(loan_table[i][0])+" = "+str(amount))
         total_payments += amount
         list_payments[i] += amount
         loan -= amount
