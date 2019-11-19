@@ -50,7 +50,7 @@ for i in range(0,MAX):
 #Print the list of payments
 for i in range(0,len(list_payments)):
     print("For loan : "+str(loan_table[i][0]*MULTIPLIER)+" we paid a total of "+str(list_payments[i])+" an interest of "+str(interest[i]),end="")
-    print(" number of payments for "+str(loan_table[i][0]*MULTIPLIER)+" = "+str(number_payments[i]))
+    print(" number of payments made : "+str(number_payments[i]))
 print("Total owed = ",total_owed," total paid = ",total_payments)
     
     
